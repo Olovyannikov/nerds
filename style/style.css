@@ -537,6 +537,8 @@ ul.cart-menu a::before {
     border-radius: 50%;
     width: 79px;
     height: 79px;
+
+    transition: .2s ease-in;
 }
 
 .social a.btn-fb::before {
