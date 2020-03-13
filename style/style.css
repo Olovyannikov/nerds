@@ -83,6 +83,11 @@ ul.menu   {
     justify-content: space-between;
 }
 
+.menu a.active {
+    border-bottom: #fb565a solid 2px;
+    padding-bottom: 10px;
+}
+
 .cart__container {
     align-items: center;
     width: 360px;
@@ -728,7 +733,7 @@ main .main__section {
 .range-controls .toggle {
     position: absolute;
     top: 30px;
-    left: 0px;
+    left: 0;
     width: 4px;
     height: 4px;
     cursor: pointer;
@@ -884,13 +889,16 @@ main .main__section {
 .main__section--sort .sort__style {
     display: flex;
     margin: 0;
-    margin-left: auto;
+    margin-left: 280px;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 18px;
-    width: 380px;
-    justify-content: space-around;
+    width: 300px;
 }
+
+ .sort__style li {
+     margin-right: auto;
+ }
 
 .sort__style--choose {
     font-weight: bolder;
