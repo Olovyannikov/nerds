@@ -9,21 +9,21 @@
 </head>
 <body>
 
-<header class="main-header">
+<header class="main__header">
     <div class="container">
-        <div class="menu-wrapper flex">
-    <div class="logo"><img src="svg/nerds-logo.svg" alt="Логотип"></div>
-    <nav class="top-menu flex">
-        <ul class="menu">
-            <li><a href="#studio">Студия</a></li>
-            <li><a href="#clients">Клиенты</a></li>
-            <li><a href="catalog.html">Магазин</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-        </ul>
-    </nav>
-    <div class="cart flex">
-        <ul class="cart-menu">
-            <li><a href="#">Корзина</a></li>
+        <div class="menu__wrapper flex">
+            <div class="main__logo"><img src="svg/nerds-logo.svg" alt="Логотип"></div>
+            <nav class="top__menu flex">
+                <ul class="menu">
+                    <li><a href="#studio">Студия</a></li>
+                    <li><a href="#clients">Клиенты</a></li>
+                    <li><a href="catalog.html">Магазин</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="cart__container flex">
+                <ul class="cart__container--menu">
+                    <li><a href="#">Корзина</a></li>
         </ul>
     </div>
         </div>
@@ -31,23 +31,23 @@
             <input type="radio" id="btn-1" name="toggle" checked>
             <input type="radio" id="btn-2" name="toggle">
             <input type="radio" id="btn-3" name="toggle">
-            <div class="slider-controls">
+            <div class="slider__controls">
                 <label for="btn-1"></label>
                 <label for="btn-2"></label>
                 <label for="btn-3"></label>
             </div>
             <div class="slides">
                 <div class="slide">
-                    <div class="slide-text">
-                        <div class="slide-title">Долго, дорого, скрупулезно</div>
+                    <div class="slide__text">
+                        <div class="slide__title">Долго, дорого, скрупулезно</div>
                         <p>Математически выверенный дизайн<br>
                             для вашего сайта или мобильного приложения.</p>
                         <a class="btn" href="#openModal">Узнать больше</a>
                     </div>
                 </div>
                 <div class="slide">
-                    <div class="slide-text">
-                        <div class="slide-title">Любим математику <br>
+                    <div class="slide__text">
+                        <div class="slide__title">Любим математику <br>
                             как никто другой</div>
                         <p>Никакого креатива, только математические формулы <br>
                             для расчета идеальных пропорций.</p>
@@ -55,8 +55,8 @@
                     </div>
                 </div>
                 <div class="slide">
-                    <div class="slide-text">
-                        <div class="slide-title">Только ночь, <br>
+                    <div class="slide__text">
+                        <div class="slide__title">Только ночь, <br>
                             только хардкор</div>
                         <p>Работать днем, как все? Мы против этого. <br>
                             Ближе к полуночи работа только начинается.</p>
@@ -156,11 +156,7 @@
         <a href="#openModal" class="more-btn">Напишите нам</a>
         <a href="#" class="marker"></a>
     </div>
-<!--        <div class="modal" id="modal">-->
 
-<!--            <button href="#" class="close">Закрыть</button>-->
-
-<!--        </div>-->
 
         <div id="openModal" class="modal">
             <div class="modal-dialog">

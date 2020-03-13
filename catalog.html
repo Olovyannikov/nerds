@@ -7,7 +7,201 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>Nёrds Каталог</title>
 </head>
-<body>
+<body class="inner">
+<header class="main__header">
+    <div class="container">
+        <div class="menu__wrapper flex">
+            <div class="main__logo"><a href="index.html" class="logo"><img src="svg/nerds-logo.svg" alt="Логотип"></a></div>
+            <nav class="top__menu flex">
+                <ul class="menu">
+                    <li><a href="index.html#studio">Студия</a></li>
+                    <li><a href="index.html#clients">Клиенты</a></li>
+                    <li><a href="catalog.html">Магазин</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="cart__container flex">
+                <ul class="cart__container--menu">
+                    <li><a href="#">Корзина</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h1 class="header__title">Магазин готовых шаблонов</h1>
+    </div>
+</header>
+
+<main class="main__section">
+    <section class="shop">
+        <div class="container flex">
+        <div class="main__section--filter">
+            <form action="form.php" method="GET">
+                <div class="range-filter">
+                    <h2 class="main__section--header">Стоимость: </h2>
+                    <div class="range-controls">
+                        <div class="scale">
+                            <div class="bar" style="margin-left: 20%; width: 30%"></div>
+                        </div>
+                        <div class="toggle toggle-min"></div>
+                        <div class="toggle toggle-max"></div>
+                    </div>
+                    <div class="price-controls">
+                        <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                        <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+                    </div>
+                </div>
+
+                <!-- другие элементы формы -->
+                <div class="radio-filter">
+                    <h2 class="main__section--header">Сетка:</h2>
+                    <input type="radio" id="adaptive" name="display">
+                    <label for="adaptive">Адаптивная</label>
+                    <input type="radio" id="fix" name="display">
+                    <label for="fix">Фиксированная</label>
+                    <input type="radio" id="fluid" name="display">
+                    <label for="fluid">Резиновая</label>
+                </div>
+
+                <div class="checkbox-filter">
+                    <h2 class="main__section--header">Особенности:</h2>
+                    <input type="checkbox" id="slider" name="specs">
+                    <label for="slider">Слайдер</label>
+                    <input type="checkbox" id="advantages" name="specs">
+                    <label for="advantages">Блок преимуществ</label>
+                    <input type="checkbox" id="news" name="specs">
+                    <label for="news">Новости</label>
+                    <input type="checkbox" id="gallery" name="specs">
+                    <label for="gallery">Галерея</label>
+                    <input type="checkbox" id="cart" name="specs">
+                    <label for="cart">Корзина</label>
+                </div>
+            <button class="filter-button">Показать</button>
+            </form>
+
+        </div>
+
+         <div class="main__section--sort">
+             <h2 class="main__section--header">Сортировать:</h2>
+             <ul class="sort__style">
+                 <li><a class="sort__style--choose" href="#">По цене</a></li>
+                 <li><a  href="#">По типу</a></li></li>
+                 <li><a  href="#">По названию</a></li></li>
+             </ul>
+             <ul class="sort__side">
+                 <li><input name="sort" id="up" type="radio" checked class="sort__button--downside" href="#"><label for="up"> </label></li>
+                 <li><input name="sort" id="down" type="radio" class="sort__button--upside" href="#"><label for="down"></label></li>
+             </ul>
+
+             <ul class="content__images">
+                 <li><img src="img/img-sedona.jpg.png" alt="">
+                     <span class="content__images--hover">
+                     <h3 class="content__images--header">Sedona</h3>
+                     <p class="content__images--text">Информационный сайт <br> для туристов</p>
+                     <button class="content__images--button">9900 руб.</button>
+                 </span>
+                 </li>
+                 <li><img src="img/img-pink.jpg.png" alt="">             <span class="content__images--hover">
+                     <h3 class="content__images--header">Pink App</h3>
+                     <p class="content__images--text">Продуктовый лендинг <br>
+приложения для iOS и Android</p>
+                     <button class="content__images--button">9900 руб.</button>
+                 </span></li>
+                 <li><img src="img/img-barbershop.jpg.png" alt="">             <span class="content__images--hover">
+                     <h3 class="content__images--header">Barbershop</h3>
+                     <p class="content__images--text">Сайт салоны красоты. <br> Для мужчин, да.</p>
+                     <button class="content__images--button">9900 руб.</button>
+                 </span></li>
+                 <li><img src="img/img-mishka.jpg.png" alt="">             <span class="content__images--hover">
+                     <h3 class="content__images--header">Mishka</h3>
+                     <p class="content__images--text">Интернет-магазин  <br>
+вязаных игрушек</p>
+                     <button class="content__images--button">9900 руб.</button>
+                 </span></li>
+                 <li><img src="img/img-aplus.jpg.png" alt="">             <span class="content__images--hover">
+                     <h3 class="content__images--header">Aplus</h3>
+                     <p class="content__images--text">Лендинг курсов <br> повышения квалификации</p>
+                     <button class="content__images--button">9900 руб.</button>
+                 </span></li>
+                 <li><img src="img/img-kvast.jpg.png" alt="">             <span class="content__images--hover">
+                     <h3 class="content__images--header">Кваст</h3>
+                     <p class="content__images--text">Промо-сайт производителя <br>
+крафтового кваса</p>
+                     <button class="content__images--button">9900 руб.</button>
+                 </span></li>
+             </ul>
+             <div class="paginator">
+                 <ul class="paginator__buttons">
+                     <li><a class="paginator__buttons--active" href="#">1</a></li>
+                     <li><a href="#">2</a></li>
+                     <li><a href="#">3</a></li>
+                     <li><a href="#">Следующая</a></li>
+                 </ul>
+             </div>
+         </div>
+
+        </div>
+    </section>
+</main>
+
+<section class="contacts" id="contacts">
+    <div class="map ">
+        <img  src="img/map.png" alt="Я карта!">
+    </div> <!-- margin btm 70px -->
+    <div class="container">
+        <div class="pop-up">
+            <h2>NЁRDS DESIGN STUDIO</h2>
+            <p>191186, Санкт-Петербург, <br>
+                ул. Б. Конюшенная, д. 19/8 <br> <br>
+
+                тел. +7 (812) 275-75-75</p>
+            <a href="#openModal" class="more-btn">Напишите нам</a>
+            <a href="#" class="marker"></a>
+        </div>
+
+        <div id="openModal" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <h1>Напишите нам!</h1>
+                    <div class="modal-header">
+                        <a href="#contacts" title="Close" class="close"></a>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <p class="modal-item">
+                                <label for="name">Ваше имя</label>
+                                <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+                            </p>
+                            <p class="modal-item">
+                                <label for="email">Ваш e-mail</label>
+                                <input type="email" id="email" name="email" placeholder="email@example.com">
+                            </p>
+                            <p class="modal-item">
+                                <label for="message">Текст письма</label>
+                                <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+
+                            </p>
+
+                            <button class="button ">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+</section>
+
+<section class="social">
+    <div class="container flex">
+        <ul class="flex">
+            <li><a class="social-btn btn-vk" href="#">vk</a></li>
+            <li><a class="social-btn btn-fb" href="#">fb</a></li>
+            <li><a class="social-btn btn-in" href="#">in</a></li>
+        </ul>
+        <div class="discount">
+            <b>Давайте дружить, это выгодно!</b>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
