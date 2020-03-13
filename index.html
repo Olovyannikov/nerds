@@ -15,10 +15,10 @@
     <div class="logo"><img src="svg/nerds-logo.svg" alt=""></div>
     <nav class="top-menu flex">
         <ul class="menu">
-            <li><a href="#">Студия</a></li>
-            <li><a href="#">Клиенты</a></li>
-            <li><a href="#">Магазин</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#studio">Студия</a></li>
+            <li><a href="#clients">Клиенты</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="#contacts">Контакты</a></li>
         </ul>
     </nav>
     <div class="cart flex">
@@ -93,7 +93,7 @@
 </section>
 
 
-<section class="about">
+<section class="about" id="studio">
     <div class="container flex">
         <div class="order-list flex">
         <strong>Мы — маленькая, но гордая <br>
@@ -129,7 +129,7 @@
     <hr class="container">
 </section>
 
-<section class="studio">
+<section class="studio" id="clients">
     <div class="container">
     <h1 class="visually-hidden">Логотипы компаний</h1>
     <ul class="partnership flex"> <!-- border top, bottom  -->
@@ -142,7 +142,7 @@
     </div>
 </section>
 
-<section class="contacts">
+<section class="contacts" id="contacts">
     <div class="map ">
         <img  src="img/map.png" alt="Я карта!">
     </div> <!-- margin btm 70px -->
@@ -153,30 +153,43 @@
             ул. Б. Конюшенная, д. 19/8 <br> <br>
 
             тел. +7 (812) 275-75-75</p>
-        <a href="#modal" class="more-btn">Напишите нам</a>
+        <a href="#openModal" class="more-btn">Напишите нам</a>
         <a href="#" class="marker"></a>
     </div>
-        <div class="modal" id="modal">
-            <h1>Напишите нам!</h1>
-            <button class="close">Закрыть</button>
-            <form>
-                <p class="modal-item">
-                <label for="name">Ваше имя</label>
-                <input type="text" id="name" name="name" placeholder="Имя Фамилия">
-                </p>
-                <p class="modal-item">
-                <label for="email">Ваш e-mail</label>
-                    <input type="email" id="email" name="email" placeholder="email@example.com">
-                </p>
-                <p class="modal-item">
-                    <label for="message">Текст письма</label>
-                <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+<!--        <div class="modal" id="modal">-->
 
-                </p>
+<!--            <button href="#" class="close">Закрыть</button>-->
 
-                <button class="button ">Отправить</button>
-            </form>
-        </div>
+<!--        </div>-->
+
+        <div id="openModal" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <h1>Напишите нам!</h1>
+                    <div class="modal-header">
+                        <a href="#contacts" title="Close" class="close"></a>
+                    </div>
+                    <div class="modal-body">
+                                    <form>
+                                        <p class="modal-item">
+                                        <label for="name">Ваше имя</label>
+                                        <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+                                        </p>
+                                        <p class="modal-item">
+                                        <label for="email">Ваш e-mail</label>
+                                            <input type="email" id="email" name="email" placeholder="email@example.com">
+                                        </p>
+                                        <p class="modal-item">
+                                            <label for="message">Текст письма</label>
+                                        <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+
+                                        </p>
+
+                                        <button class="button ">Отправить</button>
+                                    </form>
+                    </div>
+                </div>
+
     </div>
 </section>
 

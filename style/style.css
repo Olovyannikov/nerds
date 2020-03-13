@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -67,6 +71,8 @@ ul {
     padding-top: 50px;
 }
 
+
+
 ul.menu   {
     margin-top: 10px;
     margin-bottom: 0;
@@ -100,6 +106,39 @@ ul.cart-menu a::before {
     background: url("../svg/cart-icon.svg");
 }
 
+ ul.menu li a:hover {
+    border-bottom: #000101 solid 1px;
+}
+
+/*Slider-animation   */
+
+.slide {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/*end of slider-animation*/
+
+/*slider*/
 
 .slider{
     position:relative;
@@ -201,6 +240,8 @@ ul.cart-menu a::before {
 #btn-3:checked ~ .slides .slide:nth-child(3) {
     display: block;
 }
+/*end slider*/
+
 
 .advantages ul {
     margin: 0;
@@ -506,6 +547,18 @@ ul.cart-menu a::before {
     background-image: url("../svg/insta-icon.svg");
 }
 
+.social a:hover::before {
+    background-color: #fb565a;
+}
+
+.social a.btn-fb:hover::before {
+    background-color: #00ca74;
+}
+
+.social a.btn-in:hover::before {
+    background-color: #efc849;
+}
+
 .discount {
     margin-top: 5px;
     margin-left: 140px;
@@ -525,16 +578,28 @@ ul.cart-menu a::before {
     margin-top: 10px;
 }
 
-.modal {
+div.modal {
     width: 960px;
-    position: fixed;
-    z-index: 1;
     background: #ffffff;
     top: 20%;
     left: 50%;
     margin-left: -480px;
     box-shadow: 0 20px 40px #000101;
-    /*display: none;*/
+
+    position: fixed; /* фиксированное положение */
+
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    padding: 0;
+}
+
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+    pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
 
 .modal form {
@@ -555,6 +620,7 @@ ul.cart-menu a::before {
 .modal input {
     width: 310px;
     padding: 8px 8px 15px 7px;
+    font: inherit;
 }
 
 .modal .button {
@@ -603,8 +669,13 @@ ul.cart-menu a::before {
 .modal textarea {
     width: 760px;
     min-height: 120px;
+    font: inherit;
+    padding: 8px 8px 15px 7px;
 }
 
 .modal p.modal-item {
     margin: 0 40px 35px;
 }
+
+
+
